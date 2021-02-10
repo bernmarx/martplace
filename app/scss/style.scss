@@ -1,6 +1,133 @@
-html{
-    box-sizing: border-box;
+@import "_vars";
+@import "_global";
+@import "_fonts";
+
+// start header
+
+.header_top{
+    padding: 25px 0;
+    background-color: $hbg;
 }
-*,*::before,*::after{
-    box-sizing: inherit;
+.header_inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-logo a{
+        display: flex;
+        align-items: center;
+        img{
+            margin-right: 6px;
+        }
+        color: #000;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        span{
+            color: $bblue;
+        }
+    }
 }
+.header_inner-btns{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_inner-seller{
+    margin-right: 50px;
+    a{
+        padding: 4px 18px;
+        background-color: $bblue;
+        color: #fff;
+        border-radius: 35px;
+        line-height: 28px;
+        font-size: 14px;
+    }
+}
+.header_inner-user{
+    margin-left: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header_avatar{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 22px;
+}
+.header_username{
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+.header_balance{
+    color: #0674ec;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+.header_menu-inner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 17px 0;
+}
+.menu_list{
+    li{
+        display: inline-block;
+        text-transform: uppercase;
+        &+li{
+            margin-left: 34px;
+        }
+        a{
+            color: $navbtn;
+            font-size: 15px;
+            line-height: 42px;
+            font-weight: 500;
+        }
+    }
+}
+.header_search-form{
+    max-width: 360px;
+    position: relative;
+    input{
+        border-radius: 60px;
+        border: 1px solid rgb(217, 223, 229);
+        outline: none;
+        padding: 10px 75px 12px 10px;
+        width: 360px;
+        &::placeholder{
+            color: #898f96;
+            font-size: 15px;
+            line-height: 30px;
+        }
+    }
+    button{
+        position: absolute;
+        border: none;
+        background-color: $bblue;
+        border-radius: 22px;
+        padding: 0 27px;
+        height: 100%;
+        top: 0;
+        right: 0;
+        &:active{
+            border: 1px solid #000;
+        }
+    }
+}
+
+//end header
+
+.Rounded_Rectangle_1 {
+    border-width: 1px;
+    border-color: rgb(217, 223, 229);
+    border-style: solid;
+    position: absolute;
+    left: 1170px;
+    top: 117px;
+    width: 358px;
+    height: 44px;
+    z-index: 748;
+  }
+  
