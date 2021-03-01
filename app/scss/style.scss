@@ -4,37 +4,37 @@
 
 // start header
 
-.header_top{
+.header_top {
     padding: 25px 0;
-    background-color: $hbg;
+    background-color: $gbg;
 }
-.header_inner{
+.header_inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    &-logo a{
+    &-logo a {
         display: flex;
         align-items: center;
-        img{
+        img {
             margin-right: 6px;
         }
         color: #000;
-        font-family: 'Quicksand', sans-serif;
+        font-family: "Quicksand", sans-serif;
         font-weight: 700;
         font-size: 30px;
-        span{
+        span {
             color: $bblue;
         }
     }
 }
-.header_inner-btns{
+.header_inner-btns {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header_inner-seller{
+.header_inner-seller {
     margin-right: 50px;
-    a{
+    a {
         padding: 4px 18px;
         background-color: $bblue;
         color: #fff;
@@ -43,43 +43,44 @@
         font-size: 14px;
     }
 }
-.header_inner-user{
+.header_inner-user {
     margin-left: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.header_avatar{
+.header_avatar {
     width: 50px;
     height: 50px;
     border-radius: 50%;
     margin-right: 22px;
 }
-.header_username{
-    font-family: 'Quicksand', sans-serif;
+.header_username {
+    font-family: "Quicksand", sans-serif;
     font-weight: 500;
     font-size: 16px;
 }
-.header_balance{
+.header_balance {
     color: #0674ec;
-    font-family: 'Quicksand', sans-serif;
+    font-family: "Quicksand", sans-serif;
     font-weight: 400;
     font-size: 15px;
 }
-.header_menu-inner{
+.header_menu-inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 17px 0;
 }
-.menu_list{
-    li{
+.menu_list {
+    li {
         display: inline-block;
         text-transform: uppercase;
-        &+li{
+        & + li {
             margin-left: 34px;
         }
-        a{
+        a {
+            font-family: "Quicksand", sans-serif;
             color: $navbtn;
             font-size: 15px;
             line-height: 42px;
@@ -87,22 +88,22 @@
         }
     }
 }
-.header_search-form{
+.header_search-form {
     max-width: 360px;
     position: relative;
-    input{
+    input {
         border-radius: 60px;
         border: 1px solid rgb(217, 223, 229);
         outline: none;
         padding: 10px 75px 12px 10px;
         width: 360px;
-        &::placeholder{
+        &::placeholder {
             color: #898f96;
             font-size: 15px;
             line-height: 30px;
         }
     }
-    button{
+    button {
         position: absolute;
         border: none;
         background-color: $bblue;
@@ -111,7 +112,7 @@
         height: 100%;
         top: 0;
         right: 0;
-        &:active{
+        &:active {
             border: 1px solid #000;
         }
     }
@@ -121,40 +122,152 @@
 
 //start products_search
 
-.products_search{
-    background-color: $dblue;
-    padding-top: 184px;
-    padding-bottom: 235px;
+.products_search {
     text-align: center;
     color: #fff;
-    &-title{
+    &_inner {
+        background-color: $dblue;
+        padding-top: 184px;
+        padding-bottom: 235px;
+    }
+    &-title {
         font-size: 60px;
         line-height: 70px;
-        div{
+        div {
             font-weight: 700;
         }
     }
-    &-text{
+    &-text {
         font-weight: 500;
         font-size: 20px;
         line-height: 72px;
         margin-bottom: 35px;
     }
-    &-btn a{
+    &-btn a {
         color: #fff;
         font-size: 16px;
         line-height: 55px;
         border: 1px solid #fff;
         border-radius: 30px;
         padding: 0 32px;
-        & + a{
+        transition: all 0.3s;
+        & + a {
             margin-left: 24px;
         }
-        &:focus{
+        &:active,
+        &:hover {
             background-color: #fff;
             color: $bblue;
         }
     }
 }
+.search {
+    position: relative;
+}
+.search-transparent_box1 {
+    position: absolute;
+    border-radius: 6px 6px 0 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.502;
+    z-index: 1;
+    top: -10px;
+    left: 16px;
+    width: 1108px;
+    height: 13px;
+}
+.search-transparent_box2 {
+    position: absolute;
+    border-radius: 6px 6px 0 0;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.502;
+    z-index: 1;
+    top: -20px;
+    left: 32px;
+    width: 1076px;
+    height: 26px;
+}
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: #fff;
+    box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    margin: -60px 0px;
+}
+.search-input {
+    position: relative;
+    input {
+        padding: 16px 26px;
+        outline: none;
+        border-radius: 4px 0 0 4px;
+        border-width: 1px;
+        border-color: rgb(220, 220, 220);
+        border-style: solid;
+        width: 610px;
+        height: 55px;
+    }
+    select {
+        outline: none;
+        padding-left: 20px;
+        padding-right: 40px;
+        width: 195px;
+        height: 55px;
+        border-top: 1px solid #dcdcdc;
+        border-bottom: 1px solid #dcdcdc;
+        border-right: 1px solid #dcdcdc;
+        border-radius: 0 4px 4px 0;
+        border-left: none;
+        position: absolute;
+    }
+}
+.search-right {
+    button {
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        background-color: $bblue;
+        padding: 20px 50px;
+        height: 55px;
+        font-size: 16px;
+        outline: none;
+    }
+}
 
 //end products_search
+
+//start advantages
+
+.advantages{
+    margin-top: 185px;
+}
+.advantages_inner{
+    display: flex;
+    justify-content: space-between;
+}
+.advantages_item{
+    padding: 0px 30px;
+    max-width: 360px;
+    text-align: center;
+    transition: all .3s;
+    &-pic{
+        padding: 40px 0px 30px;
+    }
+    &-title{
+        font-size: 24px;
+        padding-bottom: 30px;
+        color: #000;
+    }
+    &-text{
+        font-size: 16px;
+        line-height: 30px;
+        color: #555555;
+        padding-bottom: 38px;
+    }
+    &:hover{
+        border-radius: 4px;
+        box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+    }
+}
+
+//end advantages
